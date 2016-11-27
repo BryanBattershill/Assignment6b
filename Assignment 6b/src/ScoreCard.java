@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class ScoreCard {
 	private int[] _scores = {0,0,0,0,0,0,0,0,0,0,0,0,0};
 	private int _rounds = 1;
-	private boolean _bonusYahtzee = false;
+	private boolean _bonusYahtzee = true;
 	private boolean[] _scoresFilled = {false,false,false,false,false,false,
-			false,false,false,false,false,true,false,};
+			false,false,false,false,false,false,false,};
 	
 	public void score(int boxChosen, int[] dice){
 		int total = 0;
@@ -107,7 +107,9 @@ public class ScoreCard {
 			upperTotal+= 35;
 		}
 		grandTotal = this._scores[6] + this._scores[7] + this._scores[8] 
-				+ this._scores[9] + this._scores[10] + this._scores[11] + this._scores[12];
+				+ this._scores[9] + this._scores[10] + this._scores[11] + this._scores[12] + upperTotal;
+		System.out.println("\n\n\n\n\n\n\n\n\n");
+		printScores();
 		System.out.println("Your final score is " + grandTotal + " points!");
 		System.exit(1);
 	}

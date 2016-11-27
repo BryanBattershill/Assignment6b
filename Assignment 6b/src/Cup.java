@@ -9,8 +9,7 @@ public class Cup {
 		Random rand = new Random();
 		for (int counter = 0; counter < 5; counter++){
 			if (!this._restricted[counter]){
-				//this._diceVals[counter] = rand.nextInt(6) + 1;
-				this._diceVals[counter] = 1;
+				this._diceVals[counter] = rand.nextInt(6) + 1;
 			}
 		}
 		this._timesRolled++;
