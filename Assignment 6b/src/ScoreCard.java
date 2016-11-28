@@ -1,3 +1,12 @@
+
+/****************************************************************************
+*
+* Created by: Bryan Battershill
+* Created on: Nov 2016
+* This class is responsible for the scores and the score card
+*
+****************************************************************************/
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -117,7 +126,7 @@ public class ScoreCard {
 	public void printScores(){
 		int upperTotal = this._scores[0] + this._scores[1] + this._scores[2] 
 				+ this._scores[3] + this._scores[4] + this._scores[5];
-		
+		System.out.println("=====================");
 		System.out.println("\nUpper section: \n1. Aces: " + this._scores[0] + "\n2. Twos: " + 
 				this._scores[1] + "\n3. Threes: " + this._scores[2] + "\n4. Fours: " + 
 				this._scores[3] + "\n5. Fives: " + this._scores[4] + "\n6. Sixes: " + this._scores[5]);
@@ -130,12 +139,14 @@ public class ScoreCard {
 			System.out.println("Bonus: 0");
 			System.out.println("Total + bonus: " + upperTotal);
 		}
+		System.out.println("\n=====================");
 		System.out.println("\nLower section: \n7. 3 of a Kind: " + this._scores[6]
 				+ "\n8. 4 of a kind: " + this._scores[7] + "\n9. Full House: " + this._scores[8]
 				+ "\n10. Short Straight: " + this._scores[9] + "\n11. Long Straight: " + this._scores[10] 
 				+ "\n12. Yahtzee: " + this._scores[11] + "\n13. Chance: " + this._scores[12]);
 		System.out.println("Total: " + (this._scores[6] + this._scores[7] + this._scores[8] 
 				+ this._scores[9] + this._scores[10] + this._scores[11] + this._scores[12]) + '\n');
+		System.out.println("=====================");
 	}
 	
 	private void nextRound(){

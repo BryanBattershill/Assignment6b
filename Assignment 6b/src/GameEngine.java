@@ -1,8 +1,18 @@
+
+/****************************************************************************
+*
+* Created by: Bryan Battershill
+* Created on: Nov 2016
+* This class has no properties and is the brain of the Yahtzee game
+*
+****************************************************************************/
+
 import java.util.Scanner;
 
 public class GameEngine {
 	
 	public void newGame(){
+		//Create new instance of classes
 		Scanner userIn = new Scanner(System.in);
 		ScoreCard scoreCard = new ScoreCard();
 		Cup cup = new Cup();
